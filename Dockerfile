@@ -11,7 +11,7 @@ RUN a2enmod rewrite
 ENV DEBIAN_FRONTEND noninteractive
 
 # install the PHP extensions we need + SSMTP
-RUN apt-get update && apt-get install -y libpng12-dev libjpeg-dev libpq-dev ssmtp \
+RUN apt-get update && apt-get install -y libpng-dev libjpeg-dev libpq-dev ssmtp \
 	&& rm -rf /var/lib/apt/lists/* \
 	&& docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr \
 	&& docker-php-ext-install gd mbstring pdo pdo_mysql pdo_pgsql mysqli
