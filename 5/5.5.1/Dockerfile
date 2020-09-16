@@ -1,5 +1,5 @@
 # from https://wordpress.org/about/requirements/
-FROM php:5.6-apache
+FROM php:7.3-apache
 
 MAINTAINER  Thomas Moritz <ifno@thomasmoritz.eu>
 ENV REFRESHED_AT 2020-09-11
